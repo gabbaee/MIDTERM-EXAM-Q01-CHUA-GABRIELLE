@@ -1,0 +1,26 @@
+[
+  {
+    "bookingNumber": "SRB009",
+    "student": "Paul Yap",
+    "room": "LB400",
+    "date": "2026-10-01",
+    "start_time": "14:33",
+    "end_time": "17:30"
+  },
+  {
+    "bookingNumber": "SRB010",
+    "student": "Gabrielle Chua",
+    "room": "LB400",
+    "date": "2026-10-08",
+    "start_time": "14:34",
+    "end_time": "14:31"
+  },
+  {
+    "bookingNumber": "SRB001",
+    "student": "Lauren ALbano",
+    "room": "LB400",
+    "date": "2026-10-01",
+    "start_time": "15:34",
+    "end_time": "17:36"
+  }
+]

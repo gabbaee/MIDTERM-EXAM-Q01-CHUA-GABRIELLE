@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Room Booking System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f5ff;
+            color: #172554;
+        }
+
+        header {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            color: #dbeafe;
+        }
+
+        main {
+            width: 85%;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border: 1px solid #dbeafe;
+        }
+
+        h2 {
+            color: #172554;
+            margin-top: 0;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        input {
+            padding: 11px;
+            border: 1px solid #b6c5e3;
+            border-radius: 6px;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        input:focus {
+            outline: 2px solid #172554;
+            border-color: #172554;
+        }
+
+        button {
+            padding: 11px 18px;
+            border: none;
+            border-radius: 6px;
+            background-color: #172554;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0e1734;
+        }
+
+        .search-box {
+            margin-bottom: 15px;
+        }
+
+        .search-box input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #172554;
+            color: white;
+            padding: 13px;
+            text-align: left;
+        }
+
+        td {
+            padding: 13px;
+            border-bottom: 1px solid #dbeafe;
+        }
+
+        tr:hover {
+            background-color: #eff6ff;
+        }
+
+        #message {
+            margin-bottom: 0;
+            color: #172554;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Study Room Booking System</h1>
+
+    <h2>Book a Room</h2>
+
+    <form id="booking-form">
+
+        <input type="text" id="bookingNumber" placeholder="SRB001" required>
+
+        <select id="room" placeholder="" required>
+            <option value="LB400">LB400</option>
+            <option value="LB401">LB401</option>
+            <option value="LB402">LB402</option>
+            <option value="LB403">LB403</option>
+            <option value="LB404">LB404</option>
+            <option value="LB405">LB405</option>
+        </select>
+
+        <input type="text" id="student" placeholder="Juan Dela Cruz" required>
+
+        <input type="date" id="date" required>
+
+        <input type="time" id="start_time" required>
+
+        <input type="time" id="end_time" required>
+
+        <button type="submit">Book Room</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <hr>
+
+    <h2>Search Booking</h2>
+
+    <input type="text" id="searchBooking" placeholder="Enter Booking Number">
+
+    <button onclick="searchBookings()">Search</button>
+
+    <button onclick="fetchAll()">Fetch All</button>
+
+    <p id="search-result"></p>
+
+    <hr>
+
+    <h2>All Bookings</h2>
+
+    <table border="1" cellpadding="10">
+
+        <thead>
+            <tr>
+                <th>Booking Number</th>
+                <th>Student</th>
+                <th>Room</th>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="booking-list"></tbody>
+
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
